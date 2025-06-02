@@ -56,25 +56,30 @@ function checkNumber2() {
 // "Вибачте, але ви маєте ввести значення від 1 до 4 включно".
 // Значення змінної result виведіть в консоль.
 
-let num = prompt('Введіть значення від 1 до 4');
-let result;
 
-switch (num) {
-  case '1':
-    result = "зима";
-    break;
-  case '2':
-    result = "весна";
-    break;
-  case '3':
-    result = "літо";
-    break;
-  case '4': 
-    result = "осінь";  
-    break;
-  default:
-    result = 'Вибачте, але ви маєте ввести значення від 1 до 4 включно';
-    break;
+function getSeasonByNumber() {
+  let num = prompt('Введіть значення від 1 до 4');
+  let result;
+
+  switch (num) {
+    case '1':
+      result = "зима";
+      break;
+    case '2':
+      result = "весна";
+      break;
+    case '3':
+      result = "літо";
+      break;
+    case '4':
+      result = "осінь";
+      break;
+    default:
+      result = 'Вибачте, але ви маєте ввести значення від 1 до 4 включно';
+      break;
+  }
+
+  console.log(result);
 }
 
-console.log(result);
+getSeasonByNumber()
