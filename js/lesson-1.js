@@ -82,4 +82,23 @@ function getSeasonByNumber() {
   console.log(result);
 }
 
-getSeasonByNumber()
+// getSeasonByNumber()
+
+// Отримуйте від користувача число (кількість хвилин) через prompt
+// і виводьте у консоль рядок у форматі годин та хвилин.
+// Приклад: користувач вводить в prompt '70' -> в консолі відобразиться '01:10'.
+// Корисне посилання для відображення годин та хвилин у потрібному форматі ('01' замість '1'):
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart#examples
+
+function formatMinutesToTime() {
+  let minut = Math.floor(Number(prompt('Введіть кількість хвилин')));
+  let hours = Math.floor(minut / 60);
+  let minutes = minut % 60;
+  let formattedHours = String(hours).padStart(2, '0');
+  let formattedMinutes = String(minutes).padStart(2, '0');
+
+  console.log(`${formattedHours}:${formattedMinutes}`);
+}
+
+formatMinutesToTime()
+
