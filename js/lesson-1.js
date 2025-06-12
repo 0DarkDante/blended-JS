@@ -119,7 +119,7 @@ function formatMinutesToTime() {
 // то вивести в alert рядок "Добрий день!",
 // в іншому випадку вивести в alert рядок "Невірний пароль!"
 
-logIn();
+// logIn();
 
 function logIn() {
   const login = prompt("Введіть логін");
@@ -141,4 +141,17 @@ function logIn() {
   }
 
   console.log(`Введено логін: ${login}`);
+}
+
+// Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
+
+logNumbersToTwenty(20);
+
+function logNumbersToTwenty(num) {
+  let i = 0;
+
+  while (i <= num) {
+    console.log(i);
+    i++;
+  }
 }
