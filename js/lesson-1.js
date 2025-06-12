@@ -182,7 +182,7 @@ function getNumbers(min, max) {
 // Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
 // повертати з функції рядок - 'Not a number!'.
 
-console.log(min(10,20));
+// console.log(min(10,20));
 
 function min(a, b) {
   if (typeof a !== 'number' || typeof b !== 'number') {
@@ -196,3 +196,18 @@ function min(a, b) {
   }
 }
 
+// ex 8
+// Напишіть функцію isAdult(age), яка  приймає число - вік користувача і повертає true,
+// якщо параметр age більше чи дорівнює 18.
+// В іншому випадку вона запитує підтвердження через confirm
+// і повертає його результат (true/false).
+
+isAdult(7);
+
+function isAdult(age) {
+  if (age >= 18) {
+    return true;
+  } else {
+    return confirm("Вам менше 18. Ви впевнені, що хочете продовжити?");
+  };
+};
