@@ -28,7 +28,7 @@ function checkNumber() {
 
 // const min = Math.floor(Math.random() * (59 - 0) + 0);
 
-const min = Math.floor(Math.random() * (59 - 0) + 0);
+// const min = Math.floor(Math.random() * (59 - 0) + 0);
 
 function checkNumber2() {
   if (min <= 15) {
@@ -164,7 +164,7 @@ function logNumbersToTwenty(num) {
 // Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
 // і поверніть її з функції.
 
-console.log(getNumbers(0, 20));
+// console.log(getNumbers(0, 20));
 
 function getNumbers(min, max) {
   let sum = 0;
@@ -176,3 +176,23 @@ function getNumbers(min, max) {
   }
   return sum;
 }
+
+// Ex 8
+// Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
+// Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
+// повертати з функції рядок - 'Not a number!'.
+
+console.log(min(10,20));
+
+function min(a, b) {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    return 'Not a number!';
+  } else if(a < b) {
+    return a;
+  } else if (b < a) {
+    return b;
+  } else {
+    return 'числа одинакові';
+  }
+}
+
