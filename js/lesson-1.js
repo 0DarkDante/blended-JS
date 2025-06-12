@@ -145,7 +145,7 @@ function logIn() {
 
 // Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
 
-logNumbersToTwenty(20);
+// logNumbersToTwenty(20);
 
 function logNumbersToTwenty(num) {
   let i = 0;
@@ -154,4 +154,25 @@ function logNumbersToTwenty(num) {
     console.log(i);
     i++;
   }
+}
+
+// EX 7
+// Напишіть функцію getNumbers(min, max), що приймає 2 параметри -
+// мінімальне і максимальне число відповідно.
+// Напишіть цикл всередині функції, який виводить у консоль
+// всі числа від max до min за спаданням.
+// Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
+// і поверніть її з функції.
+
+console.log(getNumbers(0, 20));
+
+function getNumbers(min, max) {
+  let sum = 0;
+
+  for (; max >= min; max--){
+    if (max % 2 === 0) {
+      sum += max;
+    }
+  }
+  return sum;
 }
