@@ -7,3 +7,18 @@
 // "<номер елемента> - <значення елемента>".
 // Використайте цикл for для перебору елементів масиву.
 // Нумерація елементів повинна починатися з 1 (а не з 0).
+
+let styles = ['jazz', 'blues'];
+
+styles.push('rock-n-roll');
+styles[1] = 'classic';
+
+function logItems(array) {
+  let i = 1;
+  for (let elem of array) {
+    console.log(`${i} - ${elem}`);
+    ++i;
+  }
+}
+
+logItems(styles);
