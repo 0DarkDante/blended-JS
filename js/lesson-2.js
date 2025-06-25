@@ -11,7 +11,11 @@
 let styles = ['jazz', 'blues'];
 
 styles.push('rock-n-roll');
-styles[1] = 'classic';
+for (let i = 0; i < styles.length; i++) {
+  if (styles[i] === 'blues') {
+    styles[i] = 'classic';
+  }
+}
 
 function logItems(array) {
   let i = 1;
@@ -56,3 +60,18 @@ function checkLogin(array) {
 // яка приймає довільну кількість
 // аргументів і повертає їхнє середнє значення.
 // Додайте перевірку, що аргументи - це числа.
+
+function caclculateAverage(...rest) {
+  let sum = 0;
+  for (let elem of rest) {
+    if (Number(elem)) {
+      sum += elem; 
+    } else {
+      console.log('NaN')
+    }
+  };
+
+  return sum;
+}
+
+console.log( caclculateAverage(5, 'afs', 12));
