@@ -30,4 +30,24 @@ function logItems(array) {
 // Якщо ім'я є в масиві – виводить повідомлення через alert: "Welcome, <name>!"
 // Якщо ім'я відсутнє – виводить повідомлення: "User not found".
 
-// const logins = ["Peter", "John", "Igor", "Sasha"];
+const logins = ["Peter", "John", "Igor", "Sasha"];
+
+function checkLogin(array) {
+  let name = prompt("Введіть ім'я");
+  let found = false;
+
+  for (let elem of array) {
+    if (elem === name) {
+      found = true; 
+      break;
+    }
+  };
+
+  if (found) {
+    alert(`Welcome, ${name}!`);
+  } else {
+    alert("User not found");
+  }
+};
+
+checkLogin(logins)
