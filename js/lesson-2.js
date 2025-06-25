@@ -50,4 +50,9 @@ function checkLogin(array) {
   }
 };
 
-checkLogin(logins)
+// checkLogin(logins)
+
+// Напишіть функцію caclculateAverage(),
+// яка приймає довільну кількість
+// аргументів і повертає їхнє середнє значення.
+// Додайте перевірку, що аргументи - це числа.
