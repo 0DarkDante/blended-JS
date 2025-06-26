@@ -75,3 +75,8 @@ function caclculateAverage(...rest) {
 }
 
 console.log( caclculateAverage(5, 'afs', 12));
+
+// Напишіть функцію caclculateAverage(),
+// яка приймає довільну кількість
+// аргументів і повертає їхнє середнє значення.
+// Додайте перевірку, що аргументи - це числа.
