@@ -38,20 +38,27 @@ const logins = ["Peter", "John", "Igor", "Sasha"];
 
 function checkLogin(array) {
   let name = prompt("Введіть ім'я");
-  let found = false;
+  // let found = false;
 
-  for (let elem of array) {
-    if (elem === name) {
-      found = true; 
-      break;
-    }
-  };
+  // for (let elem of array) {
+  //   if (elem === name) {
+  //     found = true; 
+  //     break;
+  //   }
+  // };
 
-  if (found) {
+  // if (found) {
+  //   alert(`Welcome, ${name}!`);
+  // } else {
+  //   alert("User not found");
+  // }
+  
+  if (array.includes(name)) {
     alert(`Welcome, ${name}!`);
-  } else {
+  }else {
     alert("User not found");
   }
+  
 };
 
 // checkLogin(logins)
