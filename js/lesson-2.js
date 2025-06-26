@@ -101,12 +101,29 @@ function sumAdjacentPairs(array) {
   return arr1;
 }
 
-console.log(sumAdjacentPairs(someArr));
+// console.log(sumAdjacentPairs(someArr));
 
 // Напишіть функцію findSmallestNumber(numbers),
 // яка шукає найменше число в масиві.
-// Додайте перевірку, що функція отримує саме масив, і 
+// Додайте перевірку, що функція отримує саме масив, і
 // якщо функція отримує масив - поверніть з функції найменше число,
 // в іншому випадку - поверніть 'Sory, it is not an array!'.
 
-// const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
+const numbers = [2, 5, 35, 56, 0, 12, 24, 7, 80, 3];
+
+function findSmallestNumber(numbers) {
+  let min = numbers[0];
+
+  if (Array.isArray(numbers)) {
+    for (let i = 1; i < numbers.length; i++) {
+      if (min > numbers[i]) {
+        min = numbers[i];
+      }
+    }
+  } else {
+    return 'Sory, it is not an array!';
+  }
+  return min;
+}
+
+console.log(findSmallestNumber(numbers)); 
