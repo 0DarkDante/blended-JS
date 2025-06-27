@@ -154,9 +154,25 @@ function findLongestWord(string) {
 // 4 - виведе зміст об'єкта user у форматі
 // '<ключ>:<значення>' використовуя Object.keys() та for...of
 
-// const user = {
-//     name: "John",
-//     age: 20,
-//     hobby: "tenis",
-//     premium: true,
-//   };
+const user = {
+  name: "John",
+  age: 20,
+  hobby: "tenis",
+  premium: true,
+};
+
+user.mood = 'happy';
+console.log(user);
+
+user.hobby = 'skydiving';
+console.log(user);
+
+user.premium = false;
+console.log(user);
+
+for (let elem of Object.keys(user)) {
+  console.log(`${elem}: ${user[elem]}`);
+}
+
+
+
