@@ -126,11 +126,23 @@ function findSmallestNumber(numbers) {
   return min;
 }
 
-// console.log(findSmallestNumber(numbers)); 
+// console.log(findSmallestNumber(numbers));
 
-// Напишіть функцію findLongestWord(string), яка 
+// Напишіть функцію findLongestWord(string), яка
 // приймає довільний рядок, що складається лише зі слів, розділених
 // пробілами (параметр string), і повертатиме найдовше слово у реченні.
 
-// Скористайтесь цим прикладом виклику функції для перевірки її роботи:
-// console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
+function findLongestWord(string) {
+  let arr = string.split(' '),
+      bigStr = ' ';
+
+  for (let elem of arr) {
+    if (elem.length > bigStr.length) {
+      bigStr = elem;
+    }
+  }
+
+  return bigStr;  
+}
+
+console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
