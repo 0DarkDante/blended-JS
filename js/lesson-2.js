@@ -162,28 +162,40 @@ const user = {
 };
 
 user.mood = 'happy';
-console.log(user);
+// console.log(user);
 
 user.hobby = 'skydiving';
-console.log(user);
+// console.log(user);
 
 user.premium = false;
-console.log(user);
+// console.log(user);
 
-for (let elem of Object.keys(user)) {
-  console.log(`${elem}: ${user[elem]}`);
-}
+// for (let elem of Object.keys(user)) {
+//   console.log(`${elem}: ${user[elem]}`);
+// }
 
 // Є об'єкт, в якому зберігаються зарплати команди
 // Напишіть код для додавання усіх зарплат та
 // збережіть його результат в змінній sum.
 // Якщо об'єкт salaries пустий, то результат має бути 0
 
-// const salaries = {
-//     Mango: 100,
-//     Poly: 160,
-//     Ajax: 1470,
-//   };
+const salaries = {
+  Mango: 100,
+  Poly: 160,
+  Ajax: 1470,
+};
+
+let sum = 0;
+
+if (Object.keys(salaries).length === 0) {
+  console.log(0);
+} else {
+  for (let value of Object.values(salaries)) {
+    sum += value;
+  }
+}
+
+// console.log(sum);
 
 
 
