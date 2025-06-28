@@ -206,6 +206,31 @@ if (Object.keys(salaries).length === 0) {
 // Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
 // методи sum і mult мають повертати рядок 'No such propeties'
 
+let calculator = {
+  a: null,
+  b: null,
+
+  read(a, b) {
+    this.a = a; // зберігаємо a у властивість об'єкта
+    this.b = b; // зберігаємо b у властивість об'єкта
+  },
+  sum() {
+    if (!this.exist()) return 'No such propeties';
+    return this.a + this.b;
+  },
+  mult() {
+    if (!this.exist()) return 'No such propeties';
+    return this.a * this.b;
+  },
+  exist() {
+    return this.a !== null && this.b !== null; 
+  }
+}
+
+calculator.read(2, 6);
+
+console.log(calculator.sum());
+console.log(calculator.mult());
 
 
 
